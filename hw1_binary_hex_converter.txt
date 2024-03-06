@@ -1,0 +1,56 @@
+number = int(input("十進位數字"))
+
+sequence = [7,6,5,4,3,2,1,0]
+output = ""
+for i in sequence:
+    if 2**(i+1) > number >= 2**i:
+        output += "1"
+        number = number - 2**i
+    else:
+        output += "0"
+
+
+print("二進位表示法為：",output)
+
+print("十六進位表示法為:")
+OMG = list(output)
+
+hexad_1 = (int(OMG[0])*(2**3))+(int(OMG[1])*(2**2))+(int(OMG[2])*(2**1))+(int(OMG[3])*(2**0))
+if hexad_1 == 10:
+  print("A")
+elif hexad_1 == 11:
+  print("B")
+elif hexad_1 == 12:
+  print("C")
+elif hexad_1 == 13:
+  print("D")
+elif hexad_1 == 14:
+  print("E")
+elif hexad_1 == 15:
+  print("F")
+else : 
+  print(hexad_1)
+
+hexad_2 = (int(OMG[4])*(2**3))+(int(OMG[5])*(2**2))+(int(OMG[6])*(2**1))+(int(OMG[7])*(2**0))    
+if hexad_2 == 10:
+  print("A")
+elif hexad_2 == 11:
+  print("B")
+elif hexad_2 == 12:
+  print("C")
+elif hexad_2 == 13:
+  print("D")
+elif hexad_2 == 14:
+  print("E")
+elif hexad_2 == 15:
+  print("F")
+else :
+  print(hexad_2)
+
+
+十進位數字 106
+二進位表示法為： 01101010
+十六進位表示法為:
+6
+A
+
